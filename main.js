@@ -65,6 +65,8 @@ let names = [
     "Xavier", "Zachary", "Zoe", "Zoey"
 ];
 
+
+
 let imgs = names.length;
 let ctr = 1;
 
@@ -110,9 +112,10 @@ function createCard()
 
     let text2 = document.createTextNode('');
     newContainer.appendChild(text2);
-
+    
     let newName = document.createElement('div');
     newName.classList.add('name');
+
 
     let rand = Math.random() * names.length;
 
