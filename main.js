@@ -63,7 +63,7 @@ let names = [
     "Sydney", "Tanner", "Taylor", "Thomas", "Timothy", "Travis", "Trevor", "Trinity", "Tristan", "Tyler", 
     "Valeria", "Valerie", "Vanessa", "Veronica", "Victoria", "Vincent", "Violet", "Vivian", "William", "Wyatt", 
     "Xavier", "Zachary", "Zoe", "Zoey"
-]
+];
 
 let imgs = names.length;
 let ctr = 1;
