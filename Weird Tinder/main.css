@@ -1,0 +1,168 @@
+body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    height: 100%;
+    background-color: rgb(238, 238, 185);
+    margin: 0px;
+
+    font-family: 'Segoe UI';
+    font-weight: 900;
+    font-size: 44px;
+    overflow: hidden;
+
+}
+
+.welcomeMsg
+{
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+
+.allCards
+{
+    margin-bottom: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.cardContainer
+{
+    height: 600px;
+    width: 400px;
+    background-color: white;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.prev
+{
+    position: absolute;
+    top: 22.7%;
+    left: 39.4%;
+}
+
+.cardBorder
+{
+    min-height: 415px;
+    min-width: 315px;
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 30px;
+}
+
+.card
+{
+    height: 400px;
+    width: 300px;
+    background-color: aqua;
+    background-image: url("Cats/1.jpeg");
+
+    
+    background-size: cover;
+    background-position-x: 20%;
+    background-position-y: center;
+
+   
+
+}
+
+.name
+{
+
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5%;
+
+}
+
+.leftButton
+{
+    background-color: white;
+    border: solid 3px rgb(0, 0, 71);
+    border-radius: 50%;
+
+    width: 125px;
+    height: 125px;
+
+    position: absolute;
+    left: 35.7%;
+    top: 75%;
+
+    background-image: url("greenTick.png");
+    
+    background-position-y: center;
+    background-position-x: 45%;
+    background-size: 70px;
+    background-repeat:no-repeat;
+
+    cursor: pointer;
+}
+
+.rightButton
+{
+    background-color: white;
+    border: solid 3px rgb(0, 0, 71);
+    border-radius: 50%;
+
+    width: 125px;
+    height: 125px;
+
+    position: absolute;
+    right: 35.7%;
+    top: 75%;
+
+    background-image: url("redCross.png");
+    
+    background-position-y: center;
+    background-position-x: 50%;
+    background-size: 70px;
+    background-repeat:no-repeat;
+
+    cursor: pointer;
+}
+
+footer
+{
+    background-color: white;
+    width: 100%;
+    height: 10%;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-self: end;
+
+}
+
+
+/* Animations */
+
+@keyframes leftSwipe 
+{
+    0% {transform: translateX(0px);}
+    20% {transform: translateX(100px) rotate(30deg);}
+    100% {transform: translateX(-1500px) rotate(-45deg);}
+}
+
+@keyframes rightSwipe 
+{
+    0% {transform: translateX(0px);}
+    20% {transform: translateX(-100px) rotate(-30deg);}
+    100% {transform: translateX(1500px) rotate(45deg);}
+}
+
