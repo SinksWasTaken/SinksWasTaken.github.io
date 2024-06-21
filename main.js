@@ -8,7 +8,7 @@ function createImg()
 {
     let a = "url(Cats/"
     a += String(ctr);
-    a += ".jpeg)";
+    a += ".png)";
 
     return a;
 }
