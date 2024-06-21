@@ -65,26 +65,24 @@ let names = [
     "Xavier", "Zachary", "Zoe", "Zoey"
 ]
 
-let imgs = 3;
+let imgs = names.length;
 let ctr = 1;
 
 let btns = document.getElementById('theButtons');
 
 function createImg()
 {
+    let a = "url(Cats/"
     if(ctr>400)
         {
-            let a = "url(Cats/t"
+            a+='t';
             a += String(ctr-400);
-            a += ".png)";
         }
     else
         {
-            let a = "url(Cats/"
             a += String(ctr);
-            a += ".png)";
         }
-    
+        a += ".png)";
     return a;
 }
 
