@@ -113,7 +113,7 @@ function createCard()
     let text2 = document.createTextNode('');
     newContainer.appendChild(text2);
 
-    let rand = Math.random() * 500;
+    let rand = Math.random() * names.length;
     
     let newName = document.createElement('div');
     newName.classList.add('name');
