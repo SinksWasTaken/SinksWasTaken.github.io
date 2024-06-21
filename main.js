@@ -113,7 +113,10 @@ function createCard()
 
     let newName = document.createElement('div');
     newName.classList.add('name');
-    newName.textContent = names[ctr-1];
+
+    let rand = Math.random() * names.length;
+
+    newName.textContent = names[rand];
     newContainer.appendChild(newName);
 
     let text3 = document.createTextNode('');
@@ -179,11 +182,10 @@ function press(num)
                 msg[0].textContent = 'Your Matches Are';
             }
 
-        for(i of liked)
+        for(let i =0; i < Math.min(4,liked.length);i++)
             {
-                i.style.animation="none";
-                i.classList.remove('prev');
-
+                liked[i].style.animation="none";
+                liked[i].classList.remove('prev');
             }
     
     }
