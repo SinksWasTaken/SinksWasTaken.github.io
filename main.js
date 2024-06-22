@@ -70,7 +70,7 @@ let names = [
 let imgs = names.length;
 let ctr = 1;
 
-let btns = document.getElementById('theButtons');
+
 
 function createImg()
 {
@@ -144,6 +144,53 @@ function getCardImage(card2)
     return getCardBorder(card2).firstChild.nextSibling;
 }
 
+function endSelection()
+{
+    let btns = document.getElementById('theButtons');
+
+    btns.removeChild(btns.firstChild.nextSibling);
+    btns.removeChild(btns.lastChild.previousSibling);
+    btns.removeChild(btns.lastChild.previousSibling);
+    btns.removeChild(btns.lastChild.previousSibling);
+
+    let photo = document.getElementsByClassName('cardContainer');
+    photo[ctr-1].classList.add('prev');
+    photo[ctr-1].style.opacity="0";
+
+    let liked = document.getElementsByClassName('left');
+    
+    let msg = document.getElementsByClassName('welcomeMsg');
+    
+    let hi = Math.min(4,liked.length);
+
+    if(liked.length==0)
+        {
+            msg[0].textContent = 'No Matches';
+        }
+    else
+        {
+            let str = "Your Top ";
+            str+= String(hi);
+            str+= " Match";
+            if(hi!=1)
+                {
+                    str+="es Are";
+                }
+            else
+                {
+                    str+=" is"
+                }
+
+            msg[0].textContent = str;
+        }
+
+    for(let i =0; i < hi;i++)
+        {
+            liked[i].style.animation="none";
+            liked[i].classList.remove('prev');
+        }
+}
+
 function press(num)
 {
     let allPhotos = document.getElementsByClassName('allCards');
@@ -166,32 +213,10 @@ function press(num)
     {
         ctr++;
         allPhotos[0].appendChild(createCard());
-        
     }
     else
     {
-        btns.removeChild(btns.firstChild.nextSibling);
-        btns.removeChild(btns.lastChild.previousSibling);
-
-        let liked = document.getElementsByClassName('left');
-        
-        let msg = document.getElementsByClassName('welcomeMsg');
-        
-        if(liked.length==0)
-            {
-                msg[0].textContent = 'No Matches';
-            }
-        else
-            {
-                msg[0].textContent = 'Your Matches Are';
-            }
-
-        for(let i =0; i < Math.min(4,liked.length);i++)
-            {
-                liked[i].style.animation="none";
-                liked[i].classList.remove('prev');
-            }
-    
+        endSelection();
     }
 
 }

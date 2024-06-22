@@ -136,6 +136,28 @@ body
     cursor: pointer;
 }
 
+.end
+{
+    background-color: white;
+    border: solid 3px rgb(0, 0, 71);
+    border-radius: 15%;
+
+    width: 150px;
+    height: 100px;
+
+    position: absolute;
+    
+    left: 46%;
+    top: 79%;
+
+    cursor: pointer;
+
+    color: rgb(0, 0, 71);
+    font-family: 'Segoe UI';
+    font-weight: 700;
+    font-size: 28px;
+}
+
 footer
 {
     background-color: white;
